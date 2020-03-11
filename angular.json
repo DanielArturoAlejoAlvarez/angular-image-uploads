@@ -27,9 +27,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [              
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/bootswatch/dist/materia/bootstrap.css",
+              "node_modules/ngx-toastr/toastr.css",
               "node_modules/linearicons/dist/web-font/style.css",
               "src/styles.scss"
             ],

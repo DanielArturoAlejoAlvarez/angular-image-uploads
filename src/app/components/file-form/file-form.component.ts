@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FileService } from 'src/app/services/file.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 interface HtmlInputEvent extends Event {
   target: HTMLInputElement & EventTarget;
@@ -16,7 +17,7 @@ export class FileFormComponent implements OnInit {
   image: File;//type
   imageInputSelected: string | ArrayBuffer;
 
-  constructor(private _fs: FileService, private _router: Router) { }
+  constructor(private _toastr: ToastrService, private _fs: FileService, private _router: Router) { }
 
   ngOnInit() {
   }
@@ -35,7 +36,8 @@ export class FileFormComponent implements OnInit {
     //console.log(description.value);
     this._fs.saveFile(displayName.value,description.value,status.value,this.image)
       .subscribe(data=>{
-        console.log(data)
+        //console.log(data)
+        this._toastr.success('Image saved successfully!', 'SUCCESS:');
         this._router.navigate(['files'])
       }, 
       err=>console.log(err));

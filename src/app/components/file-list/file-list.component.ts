@@ -21,13 +21,13 @@ export class FileListComponent implements OnInit {
   listFile() {
     this._fs.getFiles()
       .subscribe(data=>{
-        console.log(data)
+        //console.log(data)
         this.files = data;
       })
   }
 
   selectedCard(id: string) {
-    console.log(id)
+    //console.log(id)
     this._router.navigate(['files/edit/'+id])
   }
 
