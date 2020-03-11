@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-lg-4 p-4" *ngFor="let file of files">
+        <div class="card card-selected" (click)="selectedCard(file._id)">
+            <div class="card-header">
+                {{file.displayName}}
+            </div>
+            <img class="img-card-top w-100" [src]="'http://127.0.0.1:3000/' + file.url" alt="IMAGE 1">
+            <div class="card-body">
+                {{file.description}}
+            </div>
+        </div>
+    </div>
+</div>

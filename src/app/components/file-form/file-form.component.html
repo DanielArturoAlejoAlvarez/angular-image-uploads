@@ -1,0 +1,59 @@
+<div class="col-lg-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            UPLOAD new Image
+        </div>
+        <div class="card-body">
+            <form (submit)="uploadImage(displayName,description,status)">
+                <div class="form-group">
+                    <input 
+                        type="text"
+                        placeholder="Image's Title..." 
+                        class="form-control" 
+                        required
+                        #displayName
+                    >
+                </div>
+                <div class="form-group">
+                    <textarea
+                        rows="2" 
+                        placeholder="Image's Description..." 
+                        class="form-control"
+                        required
+                        #description
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="text"
+                        placeholder="Image's Status..." 
+                        class="form-control" 
+                        required
+                        #status
+                    >
+                </div>
+                <div class="form-group">
+                    <input
+                        type="file"
+                        class="d-none"
+                        (change)="onFileSelected($event)"
+                        #fileUpload
+                    >
+                    <img 
+                        class="img-fluid" 
+                        [src]="imageInputSelected || 'assets/img/no-image.png'" 
+                        alt="No Image"
+                        (click)="fileUpload.click()"
+                    >                    
+                </div>
+                
+                
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">
+                        UPLOAD
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
