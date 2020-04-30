@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.13",
     "bootstrap": "^4.4.1",
     "bootswatch": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "linearicons": "^1.0.2",
     "ngx-toastr": "^11.3.3",
     "rxjs": "~6.4.0",
